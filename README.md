@@ -5,13 +5,18 @@ E-commerce Sales and Customer Behavior Analysis using SQL and Python
 
 ## 技术栈
 -**SQL（MySQL）**： 多表关联、数据清洗、分组聚合、业务指标计算
+
 -**Python**： Pandas、NumPy、Matplotlib
+
 -**开发工具**： MySQL Workbench、Jupyter Notebook（PyCharm）
 
 ## 分析流程
 -**数据清洗**：检查并处理关联字段异常，验证订单、用户及商品数据之间的关联关系。
+
 -**SQL数据提取**：关联订单、订单商品、用户及商品品类等数据表，构建销售额、订单量、用户数及购买频次等指标。
+
 -**Python**分析与可视化：分析月度销售趋势、商品品类贡献、用户消费金额分布及复购行为。
+
 -**业务总结**：根据分析结果提炼核心发现，提出运营优化方向，并说明分析局限性。
 
 ## 核心分析内容
