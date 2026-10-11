@@ -1,61 +1,33 @@
 # ecommerce-data-analysis
 E-commerce Sales and Customer Behavior Analysis using SQL and Python
+
+# 电商用户消费行为与销售表现分析
+
 ## 项目简介
-本项目基于Kaggle公开的巴西电商平台Olist历史订单数据，使用MySQL和Python开展销售表现、商品品类及用户消费行为分析，旨在识别销售变化特征、主要品类贡献及不同用户群体的消费差异，并提出相应的业务优化建议。
 
-## 技术栈
--**SQL（MySQL）**： 多表关联、数据清洗、分组聚合、业务指标计算
+基于Kaggle Olist巴西电商数据集，使用MySQL和Python开展销售趋势、商品品类及用户消费行为分析，通过数据清洗、多表关联、指标计算和可视化，识别平台销售特征并提出业务优化建议。
 
--**Python**： Pandas、NumPy、Matplotlib
-
--**开发工具**： MySQL Workbench、Jupyter Notebook（PyCharm）
-
-## 分析流程
--**数据清洗**：检查并处理关联字段异常，验证订单、用户及商品数据之间的关联关系。
-
--**SQL数据提取**：关联订单、订单商品、用户及商品品类等数据表，构建销售额、订单量、用户数及购买频次等指标。
-
--**Python**分析与可视化：分析月度销售趋势、商品品类贡献、用户消费金额分布及复购行为。
-
--**业务总结**：根据分析结果提炼核心发现，提出运营优化方向，并说明分析局限性。
-
-## 核心分析内容
-销售表现分析： 月度销售额、订单量、购买用户数及销售高峰变化。
-
-商品品类分析： 核心品类销售贡献及高增长月份的品类增量。
-
-用户消费行为分析： 消费金额分布、高消费用户贡献、购买频次及复购用户特征。
+**技术栈：** MySQL、Python（Pandas、NumPy、Matplotlib）、Jupyter Notebook
 
 ## 核心分析发现
-1. 销售增长主要伴随订单规模扩大
-   
-2017年11月商品销售额环比增长52.37%，订单量增长62.77%，而平均订单金额下降6.39%。
 
-2. 核心商品品类贡献集中
-
-销售额Top 10品类合计贡献约63.28%的商品销售额，部分非长期头部品类也在特定月份表现出明显增长。
-
-3. 用户消费分布不均衡，复购用户累计消费更高
-
-累计消费金额Top 10%用户贡献约41.10%的商品销售额；累计复购率约3%。复购用户人均累计消费金额为260.08 BRL，高于单次购买用户的137.91 BRL。
-
-## 业务建议
-销售运营： 针对销售高峰期提前预测订单需求，优化库存及物流资源配置。
-
-品类管理： 保障核心品类运营资源，动态关注阶段性增长品类。
-
-用户运营： 结合累计消费金额与购买频次开展用户分层，重点研究高消费单次购买用户的二次购买转化。
+- **销售表现：** 2017年11月商品销售额环比增长52.37%，主要伴随订单量增长（62.77%），而非平均订单金额提升。
+- **商品品类：** 销售额Top 10品类合计贡献约63.28%的商品销售额，部分非头部品类在特定月份表现突出。
+- **用户行为：** Top 10%高消费用户贡献约41.10%的商品销售额，累计复购率约3%，复购用户人均累计消费金额高于单次购买用户。
 
 ## 项目文件
-SQL脚本：数据清洗、关联查询及指标提取
 
-Python Notebook：数据分析与可视化代码
+| 分析模块 | SQL代码 | Python分析 |
+|---|---|---|
+| 数据预处理 | [data_pretent.sql](data_pretent.sql) | — |
+| 销售表现 | [sell_analysis.sql](sell_analysis.sql) | [sell_analysis.ipynb](sell_analysis.ipynb) |
+| 商品品类 | [products_analysis.sql](products_analysis.sql) | [products_analysis.ipynb](products_analysis.ipynb) |
+| 用户行为 | [user_analysis.sql](user_analysis.sql) | [user_analysis.ipynb](user_analysis.ipynb) |
 
-分析图表：主要分析结果的可视化展示
+## 完整分析报告
 
-完整分析报告：包含分析方法、详细结果、业务建议及局限性
+[点击查看完整分析报告（PDF）](电商分析报告.pdf)
 
-## 数据来源
-Kaggle — Brazilian E-Commerce Public Dataset by Olist
+**数据来源：** [Kaggle — Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 
-说明：销售额指标为已交付订单的商品金额汇总，不包含运费；销售趋势及品类分析主要采用2017年1月至2018年8月的数据，用户行为分析采用数据集覆盖期间的全部已交付订单。<br>
+**统计口径：** 商品销售额不含运费，仅统计已交付订单；销售与品类分析主要覆盖2017年1月至2018年8月，用户行为分析采用数据集覆盖期间的全部已交付订单。
