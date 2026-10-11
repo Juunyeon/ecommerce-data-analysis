@@ -4,7 +4,7 @@ E-commerce Sales and Customer Behavior Analysis using SQL and Python
 本项目基于Kaggle公开的巴西电商平台Olist历史订单数据，使用MySQL和Python开展销售表现、商品品类及用户消费行为分析，旨在识别销售变化特征、主要品类贡献及不同用户群体的消费差异，并提出相应的业务优化建议。
 
 # 技术栈
-SQL（MySQL）： 多表关联、数据清洗、分组聚合、业务指标计算
+SQL（MySQL）： 多表关联、数据清洗、分组聚合、业务指标计算\n
 Python： Pandas、NumPy、Matplotlib
 开发工具： MySQL Workbench、Jupyter Notebook（PyCharm）
 
